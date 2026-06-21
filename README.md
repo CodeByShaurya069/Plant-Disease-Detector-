@@ -1,3 +1,6 @@
+<img width="1920" height="1080" alt="Screenshot (218)" src="https://github.com/user-attachments/assets/44585656-3fb5-488e-8fd8-d413ea83a24d" />
+<img width="1920" height="1080" alt="Screenshot (219)" src="https://github.com/user-attachments/assets/3c63bfb1-d83a-4f5d-bf1d-88310eb62b2c" />
+
 Plant Disease Detector 🌿🔍
 
 An AI-powered web application that detects plant diseases from leaf images using Machine Learning and Computer Vision.
