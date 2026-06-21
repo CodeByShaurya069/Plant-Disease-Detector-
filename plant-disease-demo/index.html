@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Disease Detection Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-icon">🍃</div>
+        <div>
+          <div class="brand-title">PlantCare AI</div>
+          <div class="brand-subtitle">Plant Disease Detection Demo</div>
+        </div>
+      </div>
+      <div class="badge">Plant Disease Detection System </div>
+    </div>
+
+    <section class="hero">
+      <div class="panel left">
+        <div class="tag"><span></span> Smart demo for leaf disease detection</div>
+        <h1>Make your project look <span class="grad">modern and impressive</span>.</h1>
+        <p class="sub">
+          Upload a leaf photo, choose a crop, and show a clean demo prediction with confidence and prevention tips.
+          This website is designed to look attractive in front of your teacher and class.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <b>4+</b>
+            <small>Sample disease results</small>
+          </div>
+          <div class="stat">
+            <b>1 click</b>
+            <small>Upload and predict</small>
+          </div>
+          <div class="stat">
+            <b>Mobile</b>
+            <small>Responsive design</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" onclick="document.getElementById('fileInput').click()">Upload Leaf Image</button>
+          <button class="btn ghost" onclick="setHealthy()">Show Healthy Leaf</button>
+        </div>
+      </div>
+
+      <div class="panel right">
+        <div class="upload">
+          <div class="drop" id="dropArea">
+            <input type="file" id="fileInput" accept="image/*" />
+            <div id="dropContent">
+              <div class="icon">🌿</div>
+              <h3>Drag & drop your leaf photo</h3>
+              <p>or click here to browse your image</p>
+            </div>
+            <img id="preview" class="preview" alt="Leaf preview">
+          </div>
+
+          <div class="form">
+            <div class="field">
+              <label>Crop type</label>
+              <select id="cropType">
+                <option>Tomato</option>
+                <option>Potato</option>
+                <option>Maize</option>
+                <option>Grapes</option>
+                <option>Rose</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Display mode</label>
+              <select id="mode">
+                <option>Fast demo</option>
+                <option>Detailed demo</option>
+                <option>Presentation mode</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label>Plant note</label>
+              <input id="note" placeholder="Example: yellow spots on leaves">
+            </div>
+          </div>
+
+          <button class="btn primary" onclick="predict()">Detect Disease</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="result">
+      <div class="box">
+        <div id="statusBadge" class="status">Status: Waiting for image</div>
+        <h3 id="resultTitle" class="result-title">No result yet</h3>
+        <div class="score" id="score">--%</div>
+        <div class="bar"><div id="barFill"></div></div>
+        <p id="resultText" class="desc">Upload a leaf image and click Detect Disease to see a demo result.</p>
+      </div>
+
+      <div class="box tips">
+        <h3>Prevention tips</h3>
+        <ul id="tipsList">
+          <li>Keep leaves dry and clean.</li>
+          <li>Remove infected leaves quickly.</li>
+          <li>Use proper watering and sunlight.</li>
+          <li>Check plants regularly.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+       Developed by Shaurya Negi
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
